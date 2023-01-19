@@ -8,8 +8,9 @@ ext {
             jUnit5         : '5.9.1',
             kotest         : '5.5.4',
             leakCanary     : '2.10',
-            mockk          : '1.13.3',
             lifecycle      : '2.6.0-alpha04',
+            mockk          : '1.13.3',
+            navigation     : '2.6.0-alpha04',
     ]
     libraries = [
             //General
@@ -26,6 +27,7 @@ ext {
             composeMaterial3Window: "androidx.compose.material3:material3-window-size-class:$versions.composeMaterial",
             composeActivity       : "androidx.activity:activity-compose:$versions.activity",
             composeViewModel      : "androidx.lifecycle:lifecycle-viewmodel-compose:$versions.lifecycle",
+            navigationCompose     : "androidx.navigation:navigation-compose:$versions.navigation",
 
             //Google
             accompanistDrawable   : "com.google.accompanist:accompanist-drawablepainter:$versions.accompanist",
