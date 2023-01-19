@@ -59,9 +59,8 @@ android {
 dependencies {
 
     api project(':common:design')
+    api project(':common:concurrency')
 
-    implementation libraries.coroutinesCore
-    implementation libraries.coroutinesAndroid
     implementation libraries.kotlinStd
 }
 

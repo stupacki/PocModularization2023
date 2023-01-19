@@ -32,6 +32,8 @@ android {
 
 dependencies {
 
+    implementation libraries.kotlinStd
+
     api libraries.compose
     api libraries.composeRuntime
     api libraries.composeTooling

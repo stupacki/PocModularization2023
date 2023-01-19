@@ -4,4 +4,5 @@ rootProject.name = "FestivalFellow"
 include ':distribution:app',
 
 //Common
-        ':common:design'
+        ':common:design',
+        ':common:concurrency'
