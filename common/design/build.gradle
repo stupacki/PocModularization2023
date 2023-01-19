@@ -7,6 +7,11 @@ android {
     namespace 'com.festivalfellow.mobile.design'
     compileSdk globalTargetSdk
 
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+    }
+
     defaultConfig {
         minSdk globalMinSdk
         targetSdk globalTargetSdk
