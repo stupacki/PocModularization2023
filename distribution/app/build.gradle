@@ -65,6 +65,7 @@ dependencies {
 
     api project(':common:design')
     api project(':common:concurrency')
+    api project(':common:navigation')
 
     implementation libraries.kotlinStd
 }
