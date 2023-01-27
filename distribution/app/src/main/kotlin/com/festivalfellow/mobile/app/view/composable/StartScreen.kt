@@ -11,14 +11,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavController
-import com.festivalfellow.mobile.navigation.main.SecondScreenStep.Companion.SECOND_SCREEN
+import com.festivalfellow.mobile.navigation.main.Navigator
 
 @Composable
-fun StartScreen(navController: NavController, backStackEntry: NavBackStackEntry) {
+fun StartScreen(navigator: Navigator, backStackEntry: NavBackStackEntry) {
     Scaffold() { padding ->
         Column(modifier = Modifier.padding(padding)) {
-            Button(onClick = { navController.navigate(SECOND_SCREEN) }) {
+            Button(onClick = navigator.toSecond::entry) {
                 Text(text = "To Second Screen")
             }
         }

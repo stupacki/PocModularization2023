@@ -3,8 +3,8 @@ package com.festivalfellow.mobile.app.injection
 import com.festivalfellow.mobile.app.view.composable.SecondScreen
 import com.festivalfellow.mobile.app.view.composable.StartScreen
 import com.festivalfellow.mobile.navigation.main.NavigationStep
-import com.festivalfellow.mobile.navigation.main.SecondScreenStep
-import com.festivalfellow.mobile.navigation.main.StartScreenStep
+import com.festivalfellow.mobile.navigation.second.SecondScreenStep
+import com.festivalfellow.mobile.navigation.start.StartScreenStep
 import org.koin.core.component.KoinComponent
 import org.koin.core.module.Module
 import org.koin.core.qualifier.StringQualifier
@@ -25,18 +25,18 @@ fun appModule(): Module = module {
         listOf(
             StartScreenStep(
                 arguments = listOf(),
-                content = { navController, backStackEntry ->
+                content = { navigator, backStackEntry ->
                     StartScreen(
-                        navController,
+                        navigator,
                         backStackEntry,
                     )
                 },
             ),
             SecondScreenStep(
                 arguments = listOf(),
-                content = { navController, backStackEntry ->
+                content = { navigator, backStackEntry ->
                     SecondScreen(
-                        navController,
+                        navigator,
                         backStackEntry,
                     )
                 },

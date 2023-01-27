@@ -11,14 +11,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavController
-import com.festivalfellow.mobile.navigation.main.StartScreenStep.Companion.START_SCREEN
+import com.festivalfellow.mobile.navigation.main.Navigator
 
 @Composable
-fun SecondScreen(navController: NavController, backStackEntry: NavBackStackEntry) {
+fun SecondScreen(navigator: Navigator, backStackEntry: NavBackStackEntry) {
     Scaffold() { padding ->
         Column(modifier = Modifier.padding(padding)) {
-            Button(onClick = { navController.navigate(START_SCREEN) }) {
+            Button(onClick = navigator.toStart::entry) {
                 Text(text = "To Start Screen")
             }
         }

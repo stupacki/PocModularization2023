@@ -13,5 +13,5 @@ interface NavigationStep {
 
     val destination: String
 
-    val content: @Composable (NavController, NavBackStackEntry) -> Unit
+    val content: @Composable (Navigator, NavBackStackEntry) -> Unit
 }
