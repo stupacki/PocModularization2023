@@ -7,7 +7,7 @@ object AppColors {
 
     // Light Scheme Colors -->
     val primaryLight = Color.Green
-    val onPrimaryLight = Color.Green
+    val onPrimaryLight = Color.Black
     val primaryContainerLight = Color.Green
     val onPrimaryContainerLight = Color.Green
     val inversePrimaryLight = Color.Green
@@ -38,7 +38,7 @@ object AppColors {
 
     // Night Scheme Colors -->
     val primaryNight = Color.Green
-    val onPrimaryNight = Color.Green
+    val onPrimaryNight = Color.Black
     val primaryContainerNight = Color.Green
     val onPrimaryContainerNight = Color.Green
     val inversePrimaryNight = Color.Green

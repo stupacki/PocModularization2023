@@ -57,8 +57,6 @@ android {
             useJUnitPlatform()
         }
     }
-
-    dynamicFeatures = []
 }
 
 dependencies {
@@ -66,6 +64,9 @@ dependencies {
     api project(':common:design')
     api project(':common:concurrency')
     api project(':common:navigation')
+
+    api libraries.koin
+    api libraries.koinCompose
 
     implementation libraries.kotlinStd
 }
