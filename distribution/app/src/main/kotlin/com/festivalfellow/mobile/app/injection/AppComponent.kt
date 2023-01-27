@@ -1,7 +1,9 @@
 package com.festivalfellow.mobile.app.injection
 
+import com.festivalfellow.mobile.app.view.composable.SecondScreen
 import com.festivalfellow.mobile.app.view.composable.StartScreen
 import com.festivalfellow.mobile.navigation.main.NavigationStep
+import com.festivalfellow.mobile.navigation.main.SecondScreenStep
 import com.festivalfellow.mobile.navigation.main.StartScreenStep
 import org.koin.core.component.KoinComponent
 import org.koin.core.module.Module
@@ -23,7 +25,21 @@ fun appModule(): Module = module {
         listOf(
             StartScreenStep(
                 arguments = listOf(),
-                content = { StartScreen() },
+                content = { navController, backStackEntry ->
+                    StartScreen(
+                        navController,
+                        backStackEntry,
+                    )
+                },
+            ),
+            SecondScreenStep(
+                arguments = listOf(),
+                content = { navController, backStackEntry ->
+                    SecondScreen(
+                        navController,
+                        backStackEntry,
+                    )
+                },
             )
         )
     }

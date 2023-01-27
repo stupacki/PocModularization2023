@@ -19,11 +19,16 @@ fun MyAppNavHostFrame(
         navController = navController,
         startDestination = navigationSteps.first { it.isStartDestination }.destination,
     ) {
-        navigationSteps.forEach { step ->
+        navigationSteps.forEach { step: NavigationStep ->
             composable(
                 route = step.destination,
                 arguments = step.arguments,
-                content = step.content,
+                content = { backStackEntry ->
+                    step.content(
+                        navController,
+                        backStackEntry
+                    )
+                },
             )
         }
     }

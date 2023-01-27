@@ -5,18 +5,18 @@ import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 
-class StartScreenStep(
+class SecondScreenStep(
     override val arguments: List<NamedNavArgument>,
     override val content: @Composable (NavController, NavBackStackEntry) -> Unit,
 ) : NavigationStep {
 
     override val isStartDestination: Boolean
-        get() = true
+        get() = false
 
     override val destination: String
-        get() = START_SCREEN
+        get() = SECOND_SCREEN
 
     companion object {
-        const val START_SCREEN = "startScreen"
+        const val SECOND_SCREEN = "secondScreen"
     }
 }
