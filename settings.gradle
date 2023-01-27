@@ -6,4 +6,7 @@ include ':distribution:app',
 //Common
         ':common:concurrency',
         ':common:design',
-        ':common:navigation'
+        ':common:navigation',
+
+//Feature
+        ':feature:settings'
