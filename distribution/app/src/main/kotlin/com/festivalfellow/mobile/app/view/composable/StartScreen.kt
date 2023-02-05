@@ -20,6 +20,9 @@ fun StartScreen(navigator: Navigator, backStackEntry: NavBackStackEntry) {
             Button(onClick = navigator.toSecond::entry) {
                 Text(text = "To Second Screen")
             }
+            Button(onClick = navigator.toSettings::entry) {
+                Text(text = "To Settings Screen")
+            }
         }
     }
 }

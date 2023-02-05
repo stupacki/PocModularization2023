@@ -37,5 +37,7 @@ android {
 
 dependencies {
 
-    implementation project(':distribution:app')
+    implementation project(':common:design')
+    implementation project(':common:concurrency')
+    implementation project(':common:navigation')
 }

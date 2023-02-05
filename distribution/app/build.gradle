@@ -61,9 +61,10 @@ android {
 
 dependencies {
 
-    api project(':common:design')
-    api project(':common:concurrency')
-    api project(':common:navigation')
+    implementation project(':common:design')
+    implementation project(':common:concurrency')
+    implementation project(':common:navigation')
+    implementation project(':feature:settings')
 
     api libraries.koin
     api libraries.koinCompose

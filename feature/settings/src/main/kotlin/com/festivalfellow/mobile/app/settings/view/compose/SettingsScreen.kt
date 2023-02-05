@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.festivalfellow.mobile.app.view.composable
+package com.festivalfellow.mobile.app.settings.view.compose
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -14,14 +14,14 @@ import androidx.navigation.NavBackStackEntry
 import com.festivalfellow.mobile.navigation.main.Navigator
 
 @Composable
-fun SecondScreen(navigator: Navigator, backStackEntry: NavBackStackEntry) {
+fun SettingsScreen(navigator: Navigator, backStackEntry: NavBackStackEntry) {
     Scaffold() { padding ->
         Column(modifier = Modifier.padding(padding)) {
             Button(onClick = navigator.toStart::entry) {
                 Text(text = "To Start Screen")
             }
-            Button(onClick = navigator.toSettings::entry) {
-                Text(text = "To Settings Screen")
+            Button(onClick = navigator.toSecond::entry) {
+                Text(text = "To Second Screen")
             }
         }
     }
